@@ -30,7 +30,7 @@ def getLinks(content):
     return [link for link in links if link[:4]=="http" and "google" not in link ]
 
 def getDefaultCookie(scookies):
-    cm = [{'name': c.name, 'value': c.value, 'domain': c.domain, 'path': c.path} for c in s.cookies ]
+    cm = [{'name': c.name, 'value': c.value, 'domain': c.domain, 'path': c.path} for c in scookies ]
     return str(cm[0]["name"]+"="+cm[0]["value"]+"; "+cm[1]["name"]+"="+cm[1]["value"])
 
 
